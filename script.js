@@ -244,7 +244,7 @@
     });
     consent.addEventListener('change', function () { if (consentWrap.classList.contains('is-invalid')) checkConsent(); });
     function showError(msg) {
-      errBox.innerHTML = msg + ' You can also call <a href="tel:+17169756707">(716) 975-6707</a>.';
+      errBox.textContent = msg;
       errBox.hidden = false;
       if (hasGSAP && !reduced) gsap.fromTo(errBox, { y: 10, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.4 });
     }
@@ -450,7 +450,7 @@
   gsap.fromTo('.how__bg img', { yPercent: -12 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: '.how', start: 'top bottom', end: 'bottom top', scrub: true } });
 
   /* ---------- Quote ---------- */
-  gsap.from('.next li, .disclosure, .quote__phone', { y: 24, autoAlpha: 0, stagger: 0.08, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: '.next', start: 'top 90%' } });
+  gsap.from('.next li, .disclosure', { y: 24, autoAlpha: 0, stagger: 0.08, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: '.next', start: 'top 90%' } });
   gsap.fromTo('.quote__bg img', { scale: 1.2, yPercent: -4 }, { scale: 1, yPercent: 4, ease: 'none', scrollTrigger: { trigger: '.quote', start: 'top bottom', end: 'bottom top', scrub: true } });
   gsap.from('.formcard', { y: 70, autoAlpha: 0, duration: 1.3, ease: 'expo.out', scrollTrigger: { trigger: '.formcard', start: 'top 92%' } });
 
